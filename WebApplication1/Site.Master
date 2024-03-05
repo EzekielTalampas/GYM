@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max Fitness Gym</title>
+    <link rel="stylesheet" href="stylesmaster.css" /> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="box-shadow">
+                <h1 class="navbar-brand">Max Fitness Gym</h1>
+                <nav>
+                    <ul class="nav-pills border-bottom">
+                        <li><a href="Customer.aspx" runat="server" class="nav-link">Customer</a></li>
+                        <li><a href="Subscription.aspx" runat="server" class="nav-link">Subscription</a></li>
+                        <li><a href="Transaction.aspx" runat="server" class="nav-link">Transaction</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <footer class="footer border-top">
+        &copy; 2024 - MaxFitnessGym
+    </footer>
+</body>
+</html>
