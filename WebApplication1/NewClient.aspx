@@ -3,6 +3,9 @@
     <link rel="stylesheet" href="pagestyles.css" /> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="gym-logo">
+        <img src="Assets/MAXLOGO.png" alt="Gym Logo"/>
+    </div>
     <div id="container">
     <h2>New Client</h2>
     <div class="form-group">
@@ -30,7 +33,10 @@
         <label for="txtPayment">Payment:</label>
         <asp:TextBox ID="txtPayment" runat="server" CssClass="form-control"></asp:TextBox>
     </div>
-    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" />
+ <div class="btn-container">
+     <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />
+     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" />
+ </div>
+    
 </div>
 </asp:Content>

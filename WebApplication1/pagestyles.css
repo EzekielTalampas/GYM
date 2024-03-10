@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative; /* Ensure relative positioning for absolute positioning of the container */
 }
 
 #container {
@@ -10,25 +11,53 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+#gym-logo {
+    margin-bottom: 20px; /* Add some space between the logo and the rest of the content */
+    text-align: center;
+}
+
+    #gym-logo img {
+        max-width: 100%; 
+        height: auto; 
+        max-height: 250px; 
+    }
 
 h2 {
     margin-bottom: 20px;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px; /* Add some space between the buttons and other content */
+}
+
 .btn {
-    margin-bottom: 20px;
+    margin: 0 10px; /* Add margin between the buttons */
     background-color: lightblue;
     color: initial;
     text-decoration: none;
-    padding: 10px 20px; 
-    font-size: 15px; 
-    border-radius: 5px; 
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
 }
 
     .btn:hover {
-        background-color: cadetblue; 
+        background-color: cadetblue;
     }
 
 .table {
@@ -51,5 +80,23 @@ h2 {
         background-color: #f9f9f9;
     }
 
+
+.form-group {
+    margin-bottom: 20px; /* Add some space between form groups */
+    display: flex; /* Align form elements horizontally */
+    align-items: center; /* Center align form elements vertically */
+    width: 100%; /* Ensure form elements take full width */
+}
+
+    .form-group label {
+        width: 30%; /* Set label width */
+        margin-right: 10px; /* Add some space between label and input */
+        text-align: right; /* Align label text to the right */
+    }
+
+    .form-group input,
+    .form-group select {
+        flex: 1; /* Allow inputs to take remaining space */
+    }
 
 
