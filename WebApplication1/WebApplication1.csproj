@@ -70,6 +70,7 @@
     <Content Include="Assets\MAXLOGO.png" />
     <Content Include="Customer.aspx" />
     <Content Include="LogInPage.aspx" />
+    <Content Include="newclientstyles.css" />
     <Content Include="pagestyles.css" />
     <Content Include="NewClient.aspx" />
     <Content Include="stylesmaster.css" />
