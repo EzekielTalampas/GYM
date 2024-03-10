@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\MAXLOGO.png" />
     <Content Include="Customer.aspx" />
     <Content Include="LogInPage.aspx" />
     <Content Include="pagestyles.css" />
