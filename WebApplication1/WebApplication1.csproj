@@ -67,28 +67,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Customer.aspx" />
-    <Content Include="customerStyles.css" />
-    <Content Include="NewClient.aspx" />
-    <Content Include="NewClient.css" />
-    <Content Include="stylesmaster.css" />
-    <Content Include="Subscription.aspx" />
-    <Content Include="Transaction.aspx" />
+    <Content Include="Pages\Customer.aspx" />
+    <Content Include="CSS\pagestyles.css" />
+    <Content Include="Pages\NewClient.aspx" />
+    <Content Include="CSS\stylesmaster.css" />
+    <Content Include="Pages\Subscription.aspx" />
+    <Content Include="Pages\Transaction.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.aspx.cs">
+    <Compile Include="Pages\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer.aspx.designer.cs">
+    <Compile Include="Pages\Customer.aspx.designer.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewClient.aspx.cs">
+    <Compile Include="Pages\NewClient.aspx.cs">
       <DependentUpon>NewClient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NewClient.aspx.designer.cs">
+    <Compile Include="Pages\NewClient.aspx.designer.cs">
       <DependentUpon>NewClient.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,18 +98,18 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Subscription.aspx.cs">
+    <Compile Include="Pages\Subscription.aspx.cs">
       <DependentUpon>Subscription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Subscription.aspx.designer.cs">
+    <Compile Include="Pages\Subscription.aspx.designer.cs">
       <DependentUpon>Subscription.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Transaction.aspx.cs">
+    <Compile Include="Pages\Transaction.aspx.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Transaction.aspx.designer.cs">
+    <Compile Include="Pages\Transaction.aspx.designer.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
