@@ -15,11 +15,11 @@ namespace WebApplication1
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Pages/Customer.aspx");
+            Response.Redirect("~/Customer.aspx");
         }
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Pages/Customer.aspx");
+            Response.Redirect("~/Customer.aspx");
         }
     }
 }

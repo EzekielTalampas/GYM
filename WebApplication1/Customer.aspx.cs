@@ -15,7 +15,7 @@ namespace WebApplication1
         }
         protected void btnNewClient_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Pages/NewClient.aspx");
+            Response.Redirect("~/NewClient.aspx");
         }
 
     }
