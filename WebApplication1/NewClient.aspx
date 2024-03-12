@@ -4,9 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div id="gym-logo">
-        <img src="Assets/MAXLOGO.png" alt="Gym Logo"/>
-    </div>
+    
     <div id="container">
         <h2>New Client</h2>
         <div class="form-group">
