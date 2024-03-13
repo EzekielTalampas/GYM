@@ -7,7 +7,7 @@
         <h2>List of Clients</h2>
         <asp:Button ID="btnNewClient" runat="server" Text="New Client" CssClass="btn btn-primary btn-sm" OnClick="btnNewClient_Click" />
 
-
+        <%=WebApplication1.Temp%>
 
         <table class="table">
             <thead>

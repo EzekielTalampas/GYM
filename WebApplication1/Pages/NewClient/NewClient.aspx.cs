@@ -15,11 +15,11 @@ namespace MaxFitnessGym
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Customer.aspx");
+            Response.Redirect("~/CustomerData.aspx");
         }
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Customer.aspx");
+            Response.Redirect("~/CustomerData.aspx");
         }
     }
 }
