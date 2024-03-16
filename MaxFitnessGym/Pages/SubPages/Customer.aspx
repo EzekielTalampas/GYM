@@ -11,14 +11,20 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Created At</th>
-                    <th>Action</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
                 </tr>
             </thead>
             <tbody>
-                
+                <% foreach (MaxFitnessGym.App_Code.CustomerData customer in MaxFitnessGym.App_Code.CustomerData.List) { %>
+                    <tr>
+                        <th><%= customer.ID %></th>
+                        <th><%= customer.FirstName %></th>
+                        <th><%= customer.LastName %></th>
+                        <th><%= customer.PhoneNumber %></th>
+                    </tr>
+                <% } %>
             </tbody>
 
         </table>

@@ -9,16 +9,21 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Transaciton ID</th>
+                <th>ID</th>
                 <th>Customer ID</th>
                 <th>Subscription ID</th>
                 <th>Date of Purchased</th>
-                <th>Created At</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            
+            <% foreach (MaxFitnessGym.App_Code.TransactionData transaction in MaxFitnessGym.App_Code.TransactionData.List) { %>
+                <tr>
+                    <th><%= transaction.ID %></th>
+                    <th><%= transaction.CustomerID %></th>
+                    <th><%= transaction.SubscriptionID %></th>
+                    <th><%= transaction.DateOfPurchase %></th>
+                </tr>
+            <% } %>
         </tbody>
     </table>
 </div>

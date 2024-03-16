@@ -11,7 +11,7 @@ using System.Web.Hosting;
 
 namespace MaxFitnessGym.App_Code {
     public class CustomerData {
-        static List<CustomerData> List { get; set; } = new List<CustomerData>();
+        public static List<CustomerData> List { get; set; } = new List<CustomerData>();
         public int ID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
@@ -27,7 +27,7 @@ namespace MaxFitnessGym.App_Code {
             string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString)) using (SqlCommand command = connection.CreateCommand()) {
                 connection.Open();                                                                  //Open Connection
-                command.CommandText = "SELECT * FROM Customer ORDER BY postedOn DESC";              //Command
+                command.CommandText = "SELECT * FROM Customer ORDER BY FirstName DESC";             //Command
                 List = command.ExecuteReader().Cast<IDataRecord>().Select(row => new CustomerData(  //Read Data and cast
                     (int)       row["ID"],
                     (string)    row["LastName"],

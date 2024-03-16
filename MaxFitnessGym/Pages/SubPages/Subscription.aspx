@@ -10,15 +10,20 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Subscription Name</th>
+                <th>Name</th>
                 <th>Payment</th>
                 <th>Duration</th>
-                <th>Created At</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            
+            <% foreach (MaxFitnessGym.App_Code.SubscriptionData subscription in MaxFitnessGym.App_Code.SubscriptionData.List) { %>
+                <tr>
+                    <th><%= subscription.ID %></th>
+                    <th><%= subscription.Name %></th>
+                    <th><%= subscription.Payment %></th>
+                    <th><%= subscription.Duration %></th>
+                </tr>
+            <% } %>
         </tbody>
     </table>
 </div>
