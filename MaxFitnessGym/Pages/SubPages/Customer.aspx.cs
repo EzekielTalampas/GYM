@@ -14,5 +14,13 @@ namespace MaxFitnessGym {
         protected void btnNewClient_Click(object sender, EventArgs e) {
             Response.Redirect("~/Pages/NewClient/NewClient.aspx");
         }
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            
+        }
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

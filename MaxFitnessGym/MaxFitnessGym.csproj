@@ -72,8 +72,8 @@
       <DependentUpon>GymDB.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\MAXLOGO.png" />
+    <Content Include="Pages\LogIn\logIn.aspx" />
     <Content Include="Pages\LogIn\logIn.css" />
-    <Content Include="Pages\LogIn\LogInPage.aspx" />
     <Content Include="Pages\Master\stylesmaster.css" />
     <Content Include="Pages\NewClient\NewClient.aspx" />
     <Content Include="Pages\NewClient\newclientstyles.css" />
@@ -84,9 +84,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\LogIn\LogInPage.aspx.cs">
-      <DependentUpon>LogInPage.aspx</DependentUpon>
+    <Compile Include="Pages\LogIn\logIn.aspx.cs">
+      <DependentUpon>logIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LogIn\logIn.aspx.designer.cs">
+      <DependentUpon>logIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Master\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

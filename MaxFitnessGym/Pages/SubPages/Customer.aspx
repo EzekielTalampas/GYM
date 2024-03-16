@@ -14,6 +14,7 @@
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Phone Number</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,10 @@
                         <th><%= customer.FirstName %></th>
                         <th><%= customer.LastName %></th>
                         <th><%= customer.PhoneNumber %></th>
+                        <td>
+                            <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary btn-sm" OnClick="btnUpdate_Click" />
+                            <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-primary btn-sm" OnClick="btnDelete_Click" />
+                        </td>   
                     </tr>
                 <% } %>
             </tbody>
