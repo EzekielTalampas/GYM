@@ -8,15 +8,15 @@
         <asp:Button ID="btnNewClient" runat="server" Text="New Client" CssClass="btn btn-primary btn-sm" OnClick="btnNewClient_Click" />
 
         <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone Number</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
             <tbody>
                 <% foreach (MaxFitnessGym.App_Code.CustomerData customer in MaxFitnessGym.App_Code.CustomerData.List) { %>
                     <tr>

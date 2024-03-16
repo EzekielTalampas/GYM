@@ -16,17 +16,33 @@ h2 {
     margin-bottom: 20px;
 }
 
-.btn {
-    margin-bottom: 20px;
+#MainContent_btnNewClient {
     background-color: lightblue;
     color: initial;
     text-decoration: none;
     padding: 10px 20px;
     font-size: 15px;
     border-radius: 5px;
+    margin-bottom: 20px
 }
 
-    .btn:hover {
+    #btnNewClient:hover {
+        background-color: cadetblue;
+    }
+
+/* Styles for the "Update" and "Delete" buttons */
+#MainContent_btnUpdate,
+#MainContent_btnDelete {
+    background-color: lightblue;
+    color: initial;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    border: solid 0.5px;
+}
+
+    #MainContent_btnUpdate:hover,
+    #MainContent_btnDelete:hover {
         background-color: cadetblue;
     }
 
@@ -50,3 +66,11 @@ h2 {
         background-color: #f9f9f9;
     }
 
+    .table thead th {
+        font-size: 20px;
+    }
+
+    .table tbody th {
+        font-size: 14px;
+        font-weight: normal;
+    }
