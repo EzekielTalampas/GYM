@@ -18,7 +18,7 @@
                 <h1 class="navbar-brand">Max Fitness Gym</h1>
                 <nav>
                     <ul class="nav-pills border-bottom">
-                        <li><a href="/Pages/SubPages/Home.aspx" runat="server" class="nav-link">Home</a></li>
+                        <li><a href="/Pages/SubPages/tryHomePage.aspx" runat="server" class="nav-link">Home</a></li>
                         <li><a href="/Pages/SubPages/Customer.aspx" runat="server" class="nav-link">Customer</a></li>
                         <li><a href="/Pages/SubPages/Subscription.aspx" runat="server" class="nav-link">Subscription</a></li>
                         <li><a href="/Pages/SubPages/Transaction.aspx" runat="server" class="nav-link">Transaction</a></li>

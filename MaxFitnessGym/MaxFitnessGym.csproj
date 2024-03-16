@@ -82,6 +82,7 @@
     <Content Include="Pages\SubPages\pagestyles.css" />
     <Content Include="Pages\SubPages\Subscription.aspx" />
     <Content Include="Pages\SubPages\Transaction.aspx" />
+    <Content Include="Pages\SubPages\tryHomePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +119,13 @@
     <Compile Include="Pages\SubPages\Transaction.aspx.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\tryHomePage.aspx.cs">
+      <DependentUpon>tryHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\tryHomePage.aspx.designer.cs">
+      <DependentUpon>tryHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pseudo_App_Code\DBMemory.cs" />
