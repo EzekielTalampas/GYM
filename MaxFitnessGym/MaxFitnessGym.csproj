@@ -78,6 +78,7 @@
     <Content Include="Pages\NewClient\NewClient.aspx" />
     <Content Include="Pages\NewClient\newclientstyles.css" />
     <Content Include="Pages\SubPages\Customer.aspx" />
+    <Content Include="Pages\SubPages\Home.aspx" />
     <Content Include="Pages\SubPages\pagestyles.css" />
     <Content Include="Pages\SubPages\Subscription.aspx" />
     <Content Include="Pages\SubPages\Transaction.aspx" />
@@ -102,6 +103,13 @@
     <Compile Include="Pages\SubPages\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SubPages\Subscription.aspx.cs">
       <DependentUpon>Subscription.aspx</DependentUpon>
