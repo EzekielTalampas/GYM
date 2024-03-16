@@ -6,7 +6,7 @@
      <div class="left-section">
          <img src="MAXLOGO.png" alt="Image" />
      </div>
-     <div class="right-section">
+     <div class="right-section"> 
          <div class="image-container">
              <img src="Promo1.png" alt="Image 1" />
          </div>
