@@ -2,7 +2,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    position: relative; 
+    position: relative;
 }
 
 #container {
@@ -10,11 +10,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 800px; 
+    max-width: 800px;
     width: 100%;
     border: 2px solid gray;
     border-radius: 10px;
-    padding: 40px; 
+    padding: 40px;
     box-sizing: border-box;
     position: absolute;
     top: 50%;
@@ -23,8 +23,8 @@
 }
 
 h2 {
-    font-size: 32px; 
-    margin-bottom: 30px; 
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
 .btn-container {
@@ -32,16 +32,16 @@ h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 .btn {
-    margin: 0 15px; 
+    margin: 0 15px;
     background-color: lightblue;
     color: initial;
     text-decoration: none;
-    padding: 15px 30px; 
-    font-size: 20px; 
+    padding: 15px 30px;
+    font-size: 20px;
     border-radius: 5px;
 }
 
@@ -50,12 +50,12 @@ h2 {
     }
 
 .table {
-    width: 100%; 
+    width: 100%;
     border-collapse: collapse;
 }
 
     .table th, .table td {
-        padding: 15px; 
+        padding: 15px;
         border: 1px solid #ddd;
     }
 
@@ -63,7 +63,7 @@ h2 {
         background-color: #f2f2f2;
         font-weight: bold;
         text-align: left;
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .table tbody tr:nth-child(even) {
@@ -71,22 +71,22 @@ h2 {
     }
 
 .form-group {
-    margin-bottom: 30px; 
-    display: flex; 
-    align-items: center; 
-    width: 100%; 
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
     .form-group label {
-        width: 30%; 
-        margin-right: 20px; 
-        text-align: right; 
-        font-size: 20px; 
+        width: 30%;
+        margin-right: 20px;
+        text-align: right;
+        font-size: 20px;
     }
 
     .form-group input,
     .form-group select {
-        flex: 1; 
-        padding: 12px; 
-        font-size: 18px; 
+        flex: 1;
+        padding: 12px;
+        font-size: 18px;
     }
