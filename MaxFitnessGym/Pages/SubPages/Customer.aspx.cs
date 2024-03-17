@@ -9,7 +9,7 @@ using MaxFitnessGym.App_Code;
 namespace MaxFitnessGym {
     public partial class Customer : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
-            CustomerData.Fetch();
+            CustomerData.Fetch((txtSearch.Text == string.Empty) ? "SELECT * FROM Customer ORDER BY FirstName DESC" : $"SELECT * FROM Customer WHERE FirstName LIKE \'%{txtSearch.Text}%\'");
         }
         protected void btnNewClient_Click(object sender, EventArgs e) {
             Response.Redirect("~/Pages/NewClient/NewClient.aspx");

@@ -72,12 +72,12 @@
       <DependentUpon>GymDB.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\MAXLOGO.png" />
+    <Content Include="Pages\SubPages\Customer.aspx" />
     <Content Include="Pages\LogIn\logIn.aspx" />
     <Content Include="Pages\LogIn\logIn.css" />
     <Content Include="Pages\Master\stylesmaster.css" />
     <Content Include="Pages\NewClient\NewClient.aspx" />
     <Content Include="Pages\NewClient\newclientstyles.css" />
-    <Content Include="Pages\SubPages\Customer.aspx" />
     <Content Include="Pages\SubPages\MAXLOGO.png" />
     <Content Include="Pages\SubPages\pagestyles.css" />
     <Content Include="Pages\SubPages\Subscription.aspx" />
@@ -86,6 +86,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\SubPages\Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LogIn\logIn.aspx.cs">
       <DependentUpon>logIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,10 +106,6 @@
     </Compile>
     <Compile Include="Pages\NewClient\NewClient.aspx.cs">
       <DependentUpon>NewClient.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\SubPages\Customer.aspx.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\SubPages\Subscription.aspx.cs">

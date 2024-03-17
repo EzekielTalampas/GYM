@@ -23,11 +23,11 @@ namespace MaxFitnessGym.App_Code {
             this.PhoneNumber = PhoneNumber;
             List.Add(this);
         }
-        public static void Fetch() {
+        public static void Fetch(string sqlCommand) {
             string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString)) using (SqlCommand command = connection.CreateCommand()) {
                 connection.Open();                                                                  //Open Connection
-                command.CommandText = "SELECT * FROM Customer ORDER BY FirstName DESC";             //Command
+                command.CommandText = sqlCommand;             //Command
                 List = command.ExecuteReader().Cast<IDataRecord>().Select(row => new CustomerData(  //Read Data and cast
                     (int)       row["ID"],
                     (string)    row["LastName"],

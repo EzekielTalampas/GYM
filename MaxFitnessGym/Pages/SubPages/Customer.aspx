@@ -6,8 +6,7 @@
     <div id="container">
         <h2>List of Clients</h2>
         <asp:Button ID="btnNewClient" runat="server" Text="New Client" CssClass="btn btn-primary btn-sm" OnClick="btnNewClient_Click" />
-        <asp:TextBox ID="txtSearch" runat="server" CssClass="search-box" placeholder="Search..."></asp:TextBox>
-
+        <asp:TextBox ID="txtSearch" runat="server" CssClass="search-box" placeholder="Search..." OnTextChanged="Page_Load" AutoPostBack="true" />
         <table class="table">
                 <thead>
                     <tr>
