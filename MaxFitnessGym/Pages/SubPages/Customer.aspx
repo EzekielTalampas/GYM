@@ -27,7 +27,7 @@
                         <th><%= customer.LastName %></th>
                         <th><%= customer.PhoneNumber %></th>
                         <td>
-                            <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary btn-sm" OnClick="btnUpdate_Click" />
+                            <asp:Button ID="btnUpdate" runat="server" Text="Edit" CssClass="btn btn-primary btn-sm" OnClick="btnUpdate_Click" />
                             <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-primary btn-sm" OnClick="btnDelete_Click" />
                         </td>   
                     </tr>
