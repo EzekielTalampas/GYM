@@ -36,30 +36,6 @@ namespace MaxFitnessGym.App_Code {
                 )).ToList();                                                                        //Convert to List<CustomerData>
                 connection.Close();                                                                 //Close Connection
             }
-
-        }
-        public static bool DeleteCustomer(int customerId)
-        {
-            try
-            {
-                string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    using (SqlCommand command = connection.CreateCommand())
-                    {
-                        command.CommandText = "DELETE FROM Customer WHERE ID = @CustomerId";
-                        command.Parameters.AddWithValue("@CustomerId", customerId);
-                        int rowsAffected = command.ExecuteNonQuery();
-                        return rowsAffected > 0; // If rows affected, deletion successful
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Log or handle the exception appropriately
-                return false; // Deletion failed
-            }
         }
     }
 }
