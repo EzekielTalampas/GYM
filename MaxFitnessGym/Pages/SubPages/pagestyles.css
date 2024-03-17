@@ -20,8 +20,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%; /* Adjust width if necessary */
-    margin-bottom: 20px; /* Adjust margin as needed */
+    width: 80%; 
+    margin-bottom: 20px; 
 }
 
 #MainContent_btnNewClient {
@@ -43,15 +43,15 @@ h2 {
     border-radius: 4px;
     font-size: 16px;
     transition: border-color 0.3s;
-    width: 200px; /* Adjust width as necessary */
+    width: 200px; 
 }
 
     .search-box:focus {
-        border-color: #007bff; /* Change border color on focus */
-        outline: none; /* Remove default focus outline */
+        border-color: #007bff; 
+        outline: none; 
     }
 
-/* Styles for the "Update" and "Delete" buttons */
+
 #MainContent_btnUpdate,
 #MainContent_btnDelete {
     background-color: lightblue;

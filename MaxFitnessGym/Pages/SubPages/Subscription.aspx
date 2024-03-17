@@ -5,6 +5,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container">
     <h2>Subscription</h2>
+    <div class="button-container">
+        <asp:TextBox ID="txtSearch" runat="server" CssClass="search-box" placeholder="Search..." OnTextChanged="Page_Load" AutoPostBack="true" />
+    </div>
 
     <table class="table">
         <thead>
