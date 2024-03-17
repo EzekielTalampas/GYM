@@ -1,11 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Master/Site.Master" AutoEventWireup="true" CodeBehind="Subscription.aspx.cs" Inherits="MaxFitnessGym.Pages.SubPages.Subscription" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Master/Site.Master" AutoEventWireup="true" CodeBehind="Subscription.aspx.cs" Inherits="MaxFitnessGym.Subscription" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <link rel="stylesheet" href="pagestyles.css" />
+    <link rel="stylesheet" href="pagestyles.css" /> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<div id="container">
+    <div id="container">
     <h2>Subscription</h2>
-    <asp:TextBox ID="txtSearch" runat="server" CssClass="search-box" placeholder="Search..." OnTextChanged="Page_Load" AutoPostBack="true" />
 
     <table class="table">
         <thead>
