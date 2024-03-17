@@ -16,6 +16,14 @@ h2 {
     margin-bottom: 20px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Adjust width if necessary */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
 #MainContent_btnNewClient {
     background-color: lightblue;
     color: initial;
@@ -23,11 +31,24 @@ h2 {
     padding: 10px 20px;
     font-size: 15px;
     border-radius: 5px;
-    margin-bottom: 20px
 }
 
-    #btnNewClient:hover {
+    #MainContent_btnNewClient:hover {
         background-color: cadetblue;
+    }
+
+.search-box {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 200px; /* Adjust width as necessary */
+}
+
+    .search-box:focus {
+        border-color: #007bff; /* Change border color on focus */
+        outline: none; /* Remove default focus outline */
     }
 
 /* Styles for the "Update" and "Delete" buttons */
