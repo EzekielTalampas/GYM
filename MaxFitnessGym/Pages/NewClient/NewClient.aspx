@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="newclientstyles.css" /> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
     <div id="container">
         <h2>New Client</h2>
         <div class="form-group">
@@ -36,6 +35,4 @@
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" />
         </div>
     </div>
-
-
 </asp:Content>
