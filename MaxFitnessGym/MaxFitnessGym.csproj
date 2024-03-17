@@ -112,9 +112,15 @@
       <DependentUpon>Subscription.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Pages\SubPages\Subscription.aspx.designer.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SubPages\Transaction.aspx.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SubPages\Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SubPages\tryHomePage.aspx.cs">
       <DependentUpon>tryHomePage.aspx</DependentUpon>
