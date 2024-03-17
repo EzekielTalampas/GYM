@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="newclientstyles.css" /> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
     <div id="container">
         <h2>New Client</h2>
         <div class="form-group">
@@ -23,7 +22,7 @@
             <asp:DropDownList ID="ddlMembershipType" runat="server" CssClass="form-control">
                 <asp:ListItem Text="Session" Value="Session"></asp:ListItem>
                 <asp:ListItem Text="Weekly" Value="Weekly"></asp:ListItem>
-                <asp:ListItem Text="Bi-Weekly" Value="Bi-Weekly"></asp:ListItem>
+                <asp:ListItem Text="Bi-Monthly" Value="Bi-Monthly"></asp:ListItem>
                 <asp:ListItem Text="Monthly" Value="Monthly"></asp:ListItem>
             </asp:DropDownList>
         </div>
@@ -36,5 +35,4 @@
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" />
         </div>
     </div>
-
 </asp:Content>
