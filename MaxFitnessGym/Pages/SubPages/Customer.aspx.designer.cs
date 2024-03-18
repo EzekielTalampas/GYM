@@ -7,10 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MaxFitnessGym {
+namespace MaxFitnessGym
+{
 
 
-    public partial class Customer {
+    public partial class Customer
+    {
 
         /// <summary>
         /// btnNewClient control.

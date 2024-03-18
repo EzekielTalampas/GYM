@@ -1,0 +1,73 @@
+﻿/* deleteclientstyles.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.btn {
+    margin: 0 15px;
+    background-color: lightcoral;
+    color: initial;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+    .btn:hover {
+        background-color: indianred;
+    }
+
+.form-group {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+    .form-group label {
+        width: 30%;
+        margin-right: 20px;
+        text-align: right;
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        flex: 1;
+        padding: 12px;
+        font-size: 18px;
+    }

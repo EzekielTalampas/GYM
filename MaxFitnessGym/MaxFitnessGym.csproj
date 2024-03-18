@@ -72,6 +72,8 @@
       <DependentUpon>GymDB.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\MAXLOGO.png" />
+    <Content Include="Pages\NewClient\DeleteClient.aspx" />
+    <Content Include="Pages\NewClient\deleteclientstyles.css" />
     <Content Include="Pages\NewClient\Newclient.aspx" />
     <Content Include="Pages\NewClient\newclientstyles.css" />
     <Content Include="Pages\NewClient\updateclientstyles.css" />
@@ -88,6 +90,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\NewClient\DeleteClient.aspx.cs">
+      <DependentUpon>DeleteClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewClient\DeleteClient.aspx.designer.cs">
+      <DependentUpon>DeleteClient.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NewClient\Newclient.aspx.cs">
       <DependentUpon>Newclient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
