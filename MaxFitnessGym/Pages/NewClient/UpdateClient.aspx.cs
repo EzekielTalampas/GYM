@@ -108,6 +108,14 @@ namespace MaxFitnessGym
                 {
                     int clientId = Convert.ToInt32(txtEnterID.Text);
 
+                    // Check if PhoneNumber is 11 digits
+                    if (!IsPhoneNumberValid(txtPhone.Text))
+                    {
+                        lblUpdateError.Text = "Phone number must be exactly 11 digits.";
+                        lblUpdateError.Visible = true;
+                        return;
+                    }
+
                     // Update client information
                     using (SqlCommand command = new SqlCommand(updateCustomerQuery, connection))
                     {
@@ -153,6 +161,13 @@ namespace MaxFitnessGym
                 }
             }
         }
+
+        // Method to validate phone number format
+        private bool IsPhoneNumberValid(string phoneNumber)
+        {
+            return phoneNumber.Length == 11 && phoneNumber.All(char.IsDigit);
+        }
+
 
     }
 }
