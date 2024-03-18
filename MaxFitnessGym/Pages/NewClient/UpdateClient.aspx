@@ -14,7 +14,10 @@
                 <asp:Button ID="btnEnterID" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnEnterID_Click" />
                 <asp:Button ID="Button1" runat="server" Text="Back" CssClass="btn btn-secondary" OnClick="btnBack_Click" />
             </div>
-            <asp:Label ID="lblIDError" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+            <div id="label1">
+                 <asp:Label ID="lblIDError" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+            </div>
+           
         </asp:Panel>
         <asp:Panel ID="pnlUpdateClient" runat="server" Visible="false">
             <div class="form-group">
@@ -42,7 +45,10 @@
                 <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" OnClick="btnUpdate_Click" />
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" />
             </div>
-            <asp:Label ID="lblUpdateError" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+            <div ID="label2">
+                <asp:Label ID="lblUpdateError" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+            </div>
+            
         </asp:Panel>
     </div>
 </asp:Content>

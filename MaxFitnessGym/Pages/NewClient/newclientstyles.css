@@ -1,17 +1,15 @@
-﻿html, body {
+﻿/* newclientstyles.css */
+
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    position: relative;
+    font-family: Arial, sans-serif; /* Change to preferred font */
 }
 
 #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     max-width: 800px;
-    width: 100%;
+    width: 90%; /* Adjusted width */
     border: 2px solid gray;
     border-radius: 10px;
     padding: 40px;
@@ -25,18 +23,18 @@
 h2 {
     font-size: 32px;
     margin-bottom: 30px;
+    text-align: center; /* Center align heading */
 }
 
 .btn-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Distribute buttons evenly */
     align-items: center;
     width: 100%;
     margin-top: 30px;
 }
 
 .btn {
-    margin: 0 15px;
     background-color: lightblue;
     color: initial;
     text-decoration: none;
@@ -45,30 +43,9 @@ h2 {
     border-radius: 5px;
 }
 
-    .btn:hover {
-        background-color: cadetblue;
-    }
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
+.btn:hover {
+    background-color: cadetblue;
 }
-
-    .table th, .table td {
-        padding: 15px;
-        border: 1px solid #ddd;
-    }
-
-    .table th {
-        background-color: #f2f2f2;
-        font-weight: bold;
-        text-align: left;
-        font-size: 18px;
-    }
-
-    .table tbody tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
 
 .form-group {
     margin-bottom: 30px;
@@ -77,16 +54,38 @@ h2 {
     width: 100%;
 }
 
-    .form-group label {
-        width: 30%;
-        margin-right: 20px;
-        text-align: right;
-        font-size: 20px;
-    }
+.form-group label {
+    width: 30%;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 20px;
+}
 
-    .form-group input,
-    .form-group select {
-        flex: 1;
-        padding: 12px;
-        font-size: 18px;
+.form-group input,
+.form-group select {
+    flex: 1;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Improved input border */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .form-group label {
+        width: 100%;
+        text-align: left;
     }
+}
+
+#label {
+    text-align: center; /* Center align the message */
+    margin-top: 10px; /* Add some space above the message */
+}
+
+#label #MainContent_lblMessage {
+    display: block;
+    font-size: 16px; /* Adjust font size */
+    color: #d63031; /* Red color for error messages */
+    font-weight: bold; /* Make message bold */
+}
