@@ -47,7 +47,17 @@ namespace MaxFitnessGym
                         command.Parameters.AddWithValue("@CustomerID", clientId);
 
                         // Execute the query
-                        command.ExecuteNonQuery();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Check if any rows were affected
+                        if (rowsAffected == 0)
+                        {
+                            // Rollback the transaction and display error message
+                            transaction.Rollback();
+                            lblDeleteMessage.Text = "Client not found.";
+                            lblDeleteMessage.Visible = true;
+                            return;
+                        }
                     }
 
                     // Execute the delete query for 'Customer' table
@@ -57,7 +67,17 @@ namespace MaxFitnessGym
                         command.Parameters.AddWithValue("@ID", clientId);
 
                         // Execute the query
-                        command.ExecuteNonQuery();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Check if any rows were affected
+                        if (rowsAffected == 0)
+                        {
+                            // Rollback the transaction and display error message
+                            transaction.Rollback();
+                            lblDeleteMessage.Text = "Client not found.";
+                            lblDeleteMessage.Visible = true;
+                            return;
+                        }
                     }
 
                     // Commit the transaction
@@ -76,8 +96,8 @@ namespace MaxFitnessGym
                     lblDeleteMessage.Text = "Error: " + ex.Message;
                     lblDeleteMessage.Visible = true;
                 }
-
             }
         }
+
     }
 }
