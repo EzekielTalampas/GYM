@@ -1,31 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Web.Hosting;
 
 namespace MaxFitnessGym
 {
-    using System;
-    using System.Data.SqlClient;
-
     public partial class NewClient : System.Web.UI.Page
     {
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             // Define connection string
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\John Paulo A. Buan\Documents\GitHub\GYM\MaxFitnessGym\App_Data\GymDB.mdf"";Integrated Security=True";
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
 
-            // SQL queries to insert data into the tables
-            string customerQuery = "INSERT INTO Customer (LastName, FirstName, PhoneNumber) " +
-                                   "VALUES (@LastName, @FirstName, @PhoneNumber); SELECT SCOPE_IDENTITY();";
-
-            string subscriptionQuery = "INSERT INTO Subscription (CustomerID, SubscriptionName, Payment, Duration) " +
-                                       "VALUES (@CustomerID, @SubscriptionName, @Payment, @Duration); SELECT SCOPE_IDENTITY();";
-
-            string transactionQuery = "INSERT INTO Transactions (CustomerID, SubscriptionID, DateofPurchase) " +
-                                      "VALUES (@CustomerID, @SubscriptionID, @DateofPurchase)";
+            // Define the SQL query for inserting into the Customer table
+            string customerQuery = "INSERT INTO Customer (ID, LastName, FirstName, PhoneNumber) VALUES (@ID, @LastName, @FirstName, @PhoneNumber)";
 
             // Create connection and command objects
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -37,81 +24,56 @@ namespace MaxFitnessGym
 
                 try
                 {
-                    // Insert into Customer table
                     int customerId;
                     using (SqlCommand command = new SqlCommand(customerQuery, connection, transaction))
                     {
+                        // Generate a unique ID
+                        int generatedId = GenerateUniqueID();
+                        command.Parameters.AddWithValue("@ID", generatedId);
                         command.Parameters.AddWithValue("@LastName", txtLastName.Text);
                         command.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
                         command.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text);
-                        customerId = Convert.ToInt32(command.ExecuteScalar());
-                    }
 
-                    // Map selected subscription duration
-                    int duration;
-                    switch (ddlMembershipType.SelectedValue)
-                    {
-                        case "Session":
-                            duration = 1;
-                            break;
-                        case "Weekly":
-                            duration = 7;
-                            break;
-                        case "Bi-Weekly":
-                            duration = 14;
-                            break;
-                        case "Monthly":
-                            duration = 30;
-                            break;
-                        default:
-                            duration = 1; // Default to session
-                            break;
-                    }
-
-                    // Insert into Subscription table
-                    int subscriptionId;
-                    using (SqlCommand command = new SqlCommand(subscriptionQuery, connection, transaction))
-                    {
-                        command.Parameters.AddWithValue("@CustomerID", customerId);
-                        command.Parameters.AddWithValue("@SubscriptionName", ddlMembershipType.SelectedValue);
-                        command.Parameters.AddWithValue("@Payment", txtPayment.Text);
-                        command.Parameters.AddWithValue("@Duration", duration);
-                        subscriptionId = Convert.ToInt32(command.ExecuteScalar());
-                    }
-
-                    // Insert into Transactions table
-                    using (SqlCommand command = new SqlCommand(transactionQuery, connection, transaction))
-                    {
-                        command.Parameters.AddWithValue("@CustomerID", customerId);
-                        command.Parameters.AddWithValue("@SubscriptionID", subscriptionId);
-                        command.Parameters.AddWithValue("@DateofPurchase", DateTime.Now);
+                        // Execute the query
                         command.ExecuteNonQuery();
+
+                        // Set the generated ID as customerId
+                        customerId = generatedId;
                     }
 
                     // Commit the transaction
                     transaction.Commit();
 
-                    // Redirect to a success page or display a success message
-                    Response.Redirect("SuccessPage.aspx");
+                    // Display success message
+                    lblMessage.Text = "New client added successfully with ID: " + customerId;
+                    
                 }
                 catch (Exception ex)
                 {
                     // Rollback the transaction if an error occurs
                     transaction.Rollback();
 
-                    // Handle exceptions (e.g., display error message)
-                    // You can customize this part based on your application's error handling mechanism
-                    // For simplicity, I'm just printing the exception message to the console
-                    Console.WriteLine("Error: " + ex.Message);
+                    // Handle exceptions
+                    lblMessage.Text = "Error: " + ex.Message;
                 }
+               
             }
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            // You can add cancel logic here if needed
+            Response.Redirect("~/Pages/SubPages/Customer.aspx");
         }
+
+        // Method to generate a unique ID
+        private int GenerateUniqueID()
+        {
+            // Use a combination of timestamp and randomness to generate a unique ID
+            // This is just a sample implementation, replace it with your own logic
+            Random random = new Random();
+            return (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds + random.Next(1000, 9999);
+        }
+
+
     }
-
-
 }
