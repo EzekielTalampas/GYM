@@ -72,6 +72,7 @@
       <DependentUpon>GymDB.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\MAXLOGO.png" />
+    <Content Include="Assets\MAXLOGO2.jpg" />
     <Content Include="Pages\NewClient\DeleteClient.aspx" />
     <Content Include="Pages\NewClient\deleteclientstyles.css" />
     <Content Include="Pages\NewClient\Newclient.aspx" />

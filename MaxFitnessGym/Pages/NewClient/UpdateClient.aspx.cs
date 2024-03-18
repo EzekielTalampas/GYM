@@ -23,6 +23,7 @@ namespace MaxFitnessGym
 
         protected void btnEnterID_Click(object sender, EventArgs e)
         {
+            
             // Define connection string
             string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
 
