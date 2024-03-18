@@ -8,13 +8,13 @@
      </div>
      <div class="right-section"> 
          <div class="image-container">
-             <img src="Promo1.png" alt="Image 1" />
+             <img src="Promo 1.png" alt="Image 1" />
          </div>
          <div class="image-container">
-             <img src="Promo1.png" alt="Image 2" />
+             <img src="Promo2.png" alt="Image 2" />
          </div>
          <div class="image-container">
-             <img src="Promo1.png" alt="Image 3" />
+             <img src="Promo3.png" alt="Image 3" />
          </div>
      </div>
  </div>
