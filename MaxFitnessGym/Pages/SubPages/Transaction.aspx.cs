@@ -12,7 +12,7 @@ namespace MaxFitnessGym
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TransactionData.Fetch();
+            TransactionData.Fetch((txtSearch.Text == string.Empty) ? "SELECT * FROM Transactions ORDER BY DateOfPurchase DESC" : $"SELECT * FROM Transactions WHERE Customer LIKE \'%{txtSearch.Text}%\' OR Subscription LIKE \'%{txtSearch.Text}%\'");
         }
     }
 }

@@ -27,7 +27,7 @@ namespace MaxFitnessGym.App_Code {
             string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString)) using (SqlCommand command = connection.CreateCommand()) {
                 connection.Open();                                                                  //Open Connection
-                command.CommandText = sqlCommand;             //Command
+                command.CommandText = sqlCommand;                                                   //Command
                 List = command.ExecuteReader().Cast<IDataRecord>().Select(row => new CustomerData(  //Read Data and cast
                     (int)       row["ID"],
                     (string)    row["LastName"],
@@ -36,6 +36,16 @@ namespace MaxFitnessGym.App_Code {
                 )).ToList();                                                                        //Convert to List<CustomerData>
                 connection.Close();                                                                 //Close Connection
             }
+        }
+        public void Delete() {
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
+            using (SqlConnection connection = new SqlConnection(connectionString)) using (SqlCommand command = connection.CreateCommand()) {
+                connection.Open();                                                                  //Open Connection
+                command.CommandText = $"DELETE FROM Customer WHERE ID = {ID}";                      //Command
+                command.ExecuteNonQuery();
+                connection.Close();                                                                 //Close Connection
+            }
+            Fetch("SELECT * FROM Customer ORDER BY FirstName DESC");
         }
     }
 }
