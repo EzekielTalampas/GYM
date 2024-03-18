@@ -20,7 +20,7 @@ namespace MaxFitnessGym.Pages.LogIn
 
             if (username == "admin" && password == "admin123")
             {
-                Response.Redirect("/Pages/SubPages/Customer.aspx");
+                Response.Redirect("/Pages/SubPages/tryHomePage.aspx");
             }
             else
             {
