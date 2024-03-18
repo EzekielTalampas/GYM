@@ -13,9 +13,9 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Subscription Name</th>
                 <th>Payment</th>
-                <th>Duration</th>
+                <th>Duration (Days)</th>
             </tr>
         </thead>
         <tbody>

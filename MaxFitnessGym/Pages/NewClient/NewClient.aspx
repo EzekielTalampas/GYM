@@ -21,10 +21,18 @@
             <label for="txtPhone">Phone:</label>
             <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
-
+        <div class="form-group">
+            <label for="ddlSubscription">Subscription:</label>
+            <asp:DropDownList ID="ddlSubscription" runat="server" CssClass="form-control">
+                <asp:ListItem Text="Session" Value="1"></asp:ListItem>
+                <asp:ListItem Text="Weekly" Value="2"></asp:ListItem>
+                <asp:ListItem Text="Bi-Weekly" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Monthly" Value="4"></asp:ListItem>
+            </asp:DropDownList>
+        </div>
         <div class="btn-container">
             <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" OnClick="btnCancel_Click" />
+            
         </div>
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </div>

@@ -14,7 +14,7 @@
                 <th>ID</th>
                 <th>Customer ID</th>
                 <th>Subscription ID</th>
-                <th>Date of Purchased</th>
+                <th>Date of Purchase</th>
             </tr>
         </thead>
         <tbody>
