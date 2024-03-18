@@ -77,6 +77,16 @@ namespace MaxFitnessGym
             }
         }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Redirect the user back to the previous page
+            Response.Redirect(Request.UrlReferrer.ToString());
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/SubPages/Customer.aspx");
+        }
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             // Define connection string
