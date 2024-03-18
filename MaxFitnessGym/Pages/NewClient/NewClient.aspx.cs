@@ -8,6 +8,11 @@ namespace MaxFitnessGym
     {
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            if (txtPhone.Text.Length != 11)
+            {
+                lblMessage.Text = "Phone number must be exactly 11 digits.";
+                return;
+            }
             // Define connection string
             string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
 
@@ -106,6 +111,10 @@ namespace MaxFitnessGym
             return DateTime.UtcNow;
         }
 
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pages/SubPages/Customer.aspx");
+        }
 
     }
 }

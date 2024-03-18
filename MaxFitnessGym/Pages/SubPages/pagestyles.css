@@ -57,9 +57,9 @@ h2 {
     background-color: lightblue;
     color: initial;
     text-decoration: none;
+    padding: 10px 20px;
     font-size: 15px;
     border-radius: 5px;
-    border: solid 0.5px;
 }
 
     #MainContent_btnUpdate:hover,

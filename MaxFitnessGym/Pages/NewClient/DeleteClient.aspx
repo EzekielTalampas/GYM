@@ -15,6 +15,9 @@
             <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-danger" OnClick="btnDelete_Click" />
             <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn btn-secondary" OnClick="btnBack_Click" />
         </div>
-        <asp:Label ID="lblDeleteMessage" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+        <div id="label">
+            <asp:Label ID="lblDeleteMessage" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+        </div>
+        
     </div>
 </asp:Content>
