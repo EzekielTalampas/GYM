@@ -7,6 +7,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div id="container">
         <h2>New Client</h2>
+
+        <div class="form-group">
+             <label for="txtPassword">Password:</label>
+             <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+        </div>
        
         <div class="form-group">
             <label for="txtLastName">Last Name:</label>

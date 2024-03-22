@@ -22,6 +22,9 @@ namespace MaxFitnessGym
             // Define the SQL query for inserting into the Transaction table
             string transactionQuery = "INSERT INTO [Transactions] (ID, Customer, Subscription, DateOfPurchase) VALUES (@ID, @Customer, @Subscription, @DateOfPurchase)";
 
+            // Define the SQL query for inserting into the userpass table
+            string userpassQuery = "INSERT INTO userpass (ID, Password) VALUES (@ID, @Password)";
+
             // Create connection and command objects
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -70,6 +73,17 @@ namespace MaxFitnessGym
                         command.ExecuteNonQuery();
                     }
 
+                    // Insert into userpass table
+                    using (SqlCommand command = new SqlCommand(userpassQuery, connection, transaction))
+                    {
+                        // Pass the generated customer ID and the password from the textbox
+                        command.Parameters.AddWithValue("@ID", customerId);
+                        command.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                        // Execute the query
+                        command.ExecuteNonQuery();
+                    }
+
                     // Commit the transaction
                     transaction.Commit();
 
@@ -86,6 +100,7 @@ namespace MaxFitnessGym
                 }
             }
         }
+
 
         // Method to generate a unique ID for customer
         private int GenerateUniqueID()
