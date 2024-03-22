@@ -21,6 +21,10 @@
         </asp:Panel>
         <asp:Panel ID="pnlUpdateClient" runat="server" Visible="false">
             <div class="form-group">
+                <label for="txtPassword">New Password:</label>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="form-group">
                 <label for="txtLastName">Last Name:</label>
                 <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control"></asp:TextBox>
             </div>

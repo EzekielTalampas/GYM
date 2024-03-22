@@ -99,6 +99,9 @@ namespace MaxFitnessGym
             // Define the SQL query for updating subscription information
             string updateSubscriptionQuery = "UPDATE Transactions SET Subscription = @Subscription WHERE Customer = @ID";
 
+            // Define the SQL query for updating the password
+            string updatePasswordQuery = "UPDATE userpass SET Password = @Password WHERE ID = @ID";
+
             // Create connection and command objects
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -149,6 +152,21 @@ namespace MaxFitnessGym
                         }
                     }
 
+                    // Update password
+                    using (SqlCommand command = new SqlCommand(updatePasswordQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", clientId);
+                        command.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected == 0)
+                        {
+                            // Handle the case where the client does not have a password in the userpass table
+                            // You may want to insert a new password record instead
+                        }
+                    }
+
                     // Both updates were successful
                     lblUpdateError.Text = "Client information updated successfully.";
                     lblUpdateError.Visible = true;
@@ -160,6 +178,7 @@ namespace MaxFitnessGym
                     lblUpdateError.Visible = true;
                 }
             }
+
         }
 
         // Method to validate phone number format

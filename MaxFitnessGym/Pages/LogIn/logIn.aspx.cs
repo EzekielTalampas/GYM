@@ -20,6 +20,14 @@ namespace MaxFitnessGym.Pages.LogIn
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
+            // Check if the entered credentials match the admin credentials
+            if (username == "admin" && password == "admin123")
+            {
+                // Redirect to the admin homepage
+                Response.Redirect("/Pages/SubPages/tryHomePage.aspx");
+                return;
+            }
+
             // Define connection string
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GymDB.mdf;Integrated Security=True";
 
@@ -66,6 +74,7 @@ namespace MaxFitnessGym.Pages.LogIn
                 ClientScript.RegisterStartupScript(this.GetType(), "invalidLogin", "alert('Invalid username or password.');", true);
             }
         }
+
 
 
     }

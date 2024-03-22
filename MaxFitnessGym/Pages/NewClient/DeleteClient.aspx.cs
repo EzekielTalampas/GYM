@@ -19,13 +19,16 @@ namespace MaxFitnessGym
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             // Define connection string
-            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""{HostingEnvironment.MapPath("/")}App_Data\GymDB.mdf"";Integrated Security=True";
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GymDB.mdf;Integrated Security=True";
 
             // Define the SQL query for deleting from the Customer table
             string deleteCustomerQuery = "DELETE FROM Customer WHERE ID = @ID";
 
             // Define the SQL query for deleting from the Transaction table
             string deleteTransactionQuery = "DELETE FROM Transactions WHERE Customer = @CustomerID";
+
+            // Define the SQL query for deleting from the userpass table
+            string deleteUserPassQuery = "DELETE FROM userpass WHERE ID = @ID";
 
             // Extract client ID from the textbox
             string clientId = txtEnterID.Text.Trim();
@@ -80,6 +83,26 @@ namespace MaxFitnessGym
                         }
                     }
 
+                    // Execute the delete query for 'userpass' table
+                    using (SqlCommand command = new SqlCommand(deleteUserPassQuery, connection, transaction))
+                    {
+                        // Set the parameter value
+                        command.Parameters.AddWithValue("@ID", clientId);
+
+                        // Execute the query
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        // Check if any rows were affected
+                        if (rowsAffected == 0)
+                        {
+                            // Rollback the transaction and display error message
+                            transaction.Rollback();
+                            lblDeleteMessage.Text = "Client not found in userpass table.";
+                            lblDeleteMessage.Visible = true;
+                            return;
+                        }
+                    }
+
                     // Commit the transaction
                     transaction.Commit();
 
@@ -98,6 +121,7 @@ namespace MaxFitnessGym
                 }
             }
         }
+
 
     }
 }
