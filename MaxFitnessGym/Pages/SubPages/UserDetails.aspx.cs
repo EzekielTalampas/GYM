@@ -28,13 +28,16 @@ namespace MaxFitnessGym
         private void DisplayUserDetails(string userID)
         {
             // Define connection string
-            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GymDB.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GymDB.mdf;Integrated Security=True";
 
             // Define SQL query to retrieve user details
-            string query = "SELECT c.ID, c.LastName, c.FirstName, c.PhoneNumber, t.DateOfPurchase " +
+            string query = "SELECT c.ID, c.LastName, c.FirstName, c.PhoneNumber, t.DateOfPurchase, s.SubscriptionName, s.Duration " +
                            "FROM Customer c " +
                            "JOIN Transactions t ON c.ID = t.Customer " +
+                           "JOIN Subscription s ON t.Subscription = s.ID " +
                            "WHERE c.ID = @UserID";
+
+
 
             // Create connection and command objects
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -59,6 +62,8 @@ namespace MaxFitnessGym
                         lblFirstName.Text = reader["FirstName"].ToString();
                         lblPhoneNumber.Text = reader["PhoneNumber"].ToString();
                         lblDateOfPurchase.Text = Convert.ToDateTime(reader["DateOfPurchase"]).ToString("MM/dd/yyyy");
+                        lblSubscription.Text = reader["SubscriptionName"].ToString();
+                        lblDuration.Text = reader["Duration"].ToString();
                     }
                     else
                     {

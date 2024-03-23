@@ -28,6 +28,14 @@
                 <label>Date of Purchase:</label>
                 <asp:Label ID="lblDateOfPurchase" runat="server" Text=""></asp:Label>
             </div>
+            <div class="info-row">
+                <label>Subscription:</label>
+                <asp:Label ID="lblSubscription" runat="server" Text=""></asp:Label>
+            </div>
+            <div class="info-row">
+                <label>Duration (Days):</label>
+                <asp:Label ID="lblDuration" runat="server" Text=""></asp:Label>
+            </div>
         </div>
         <div class="btn-container">
             <asp:Button ID="btnBack" runat="server" Text="Log Out" CssClass="btn btn-primary" OnClick="btnBack_Click" />

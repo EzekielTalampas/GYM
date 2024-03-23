@@ -89,6 +89,7 @@
     <Content Include="Pages\SubPages\Transaction.aspx" />
     <Content Include="Pages\SubPages\tryHomePage.aspx" />
     <Content Include="Pages\SubPages\UserDetails.aspx" />
+    <Content Include="Pages\SubPages\userdetailsstyles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
