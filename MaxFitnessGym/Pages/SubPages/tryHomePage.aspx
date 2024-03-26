@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
      <div class="home-container" style="background-color: black;">
          <div class="right-section">
-             <img src="feat.gif" alt="Feat" />
+             
          </div>
          <div class="middle-section">
              <img src="gymlogo.png" alt="Gym Logo" />
@@ -18,10 +18,10 @@
                  <img src="Promo2.png" alt="Promo 2" />
              </div>
              <div class="image-container">
-                 <img src="Promo3.png" alt="Promo 3" />
+                 <img src="Promo4.png" alt="Promo 3" />
              </div>
              <div class="image-container">
-                 <img src="Promo4.png" alt="Promo 4" />
+                 <img src="Promo3.png" alt="Promo 4" />
              </div>
          </div>
      </div>
